@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import myimg from '../../public/img/logo.jpg'
 import Image from 'next/image'
@@ -22,7 +23,7 @@ export default function Header() {
           </div>
           <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div class="flex flex-shrink-0 items-center">
-              <Image class="block h-14 w-28 lg:hidden " src={myimg}  alt="Your Company" />
+              <Image class="block h-14 w-28 lg:hidden " src={myimg} alt="Your Company" />
               <Image class="hidden h-14 w-28 lg:block" src={myimg} alt="Your Company" />
             </div>
           </div>
@@ -30,9 +31,9 @@ export default function Header() {
             <div class="flex flex-shrink-0 items-center">
               <div class="hidden sm:ml-6 sm:block">
                 <div class="flex space-x-4">
-                  <a href="#" class="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">Home</a>
-                  <a href="#" class="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">About</a>
-                  <a href="#" class="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">Book</a>
+                  <a href="/home" class="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">Home</a>
+                  <a href="/about" class="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">About</a>
+                  <a href="/sports" class="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">Book</a>
                   <a href="#" class="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">Contact Us</a>
 
                 </div>
@@ -43,9 +44,10 @@ export default function Header() {
       </div>
       <div class="sm:hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-1 flex justify-center">
-          <a href="#" class="text-gray-800 hover:bg-cyan-100 hover:text-black block rounded-md px-3 py-2 text-base font-medium">Team</a>
-          <a href="#" class="text-gray-800 hover:bg-cyan-100 hover:text-black block rounded-md px-3 py-2 text-base font-medium">Projects</a>
-          <a href="#" class="text-gray-800 hover:bg-cyan-100 hover:text-black block rounded-md px-3 py-2 text-base font-medium">Calendar</a>
+          <a href="/home" class="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">Home</a>
+          <a href="/about" class="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">About</a>
+          <a href="/sports" class="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">Book</a>
+          <a href="#" class="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">Contact Us</a>
         </div>
       </div>
     </nav>

@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import cricketImage from '../../public/Images/cricket.jpeg'
 import swimmingImage from '../../public/Images/swimming.jpeg'
