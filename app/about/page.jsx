@@ -6,7 +6,7 @@ import footballImage from '../../public/Images/football.jpeg'
 import Image from 'next/image'
 const About = () => {
   return (
-    <div className="flex justify-center pt-36 pb-24">
+    <div className="flex justify-center pt-36 pb-24 bg-blue-50">
       <div className="flex flex-col max-w-7xl justify-center items-center">
         <div className="overflow-hidden w-3/4 bg-white m-6 p-6 shadow-lg flex flex-col md:flex-row justify-center shadow-gray-600  rounded-xl">
           <div className="h-26 w-full overflow-hidden"> <Image width={'100%'} height={'100%'} src={cricketImage}
@@ -19,7 +19,7 @@ const About = () => {
               of ways, including through mail, messenger, or even in person.</a></div>
           </div>
         </div>
-        <div className="overflow-hidden w-3/4 bg-white m-6 p-6 shadow-lg flex flex-col md:flex-row justify-center shadow-cyan-500/50 rounded-xl">
+        <div className="overflow-hidden w-3/4 bg-white m-6 p-6 shadow-lg flex flex-col md:flex-row justify-center shadow-green-500 rounded-xl">
           <div className="grid p-2">
             <div className="font-bold text-lg text-black m-2 mt-10">However alert we are, antiquity remains an unknown,
               unanticipated galaxy. </div>

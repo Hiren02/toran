@@ -29,7 +29,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <div className="project pb-6">
+            <div className="project pb-6 bg-white">
                 <div className="flex justify-center bg-white z-auto pt-20 mb-36" id="projectcard">
                     <div className="container1  bg-gray-200 flex flex-wrap justify-center pt-10 w-auto rounded-2xl">
                         <div className="card1 bg-sky-100">
