@@ -10,9 +10,9 @@ const Footer = () => {
         <p>@ Copyright <strong className="text-orange-400">Toran Club </strong>All Rights Reserved</p>
         <p>Designed by <span className="text-orange-400">Toran Club</span></p>
       </div>
-      <div
-        className="text-white pb-4 text-center text-xl space-x-2 md:w-2/4 md:pb-0 md:pl-2 md:space-x-1 lg:pl-[171px] lg:space-x-2 xl:pl-44">
-        <a href="#"
+      {/* <div
+        className="text-white pb-4 text-center text-xl space-x-2 md:w-2/4 md:pb-0 md:pl-2 md:space-x-1 lg:pl-[171px] lg:space-x-2 xl:pl-44"> */}
+      {/* <a href="#"
           className="w-8 h-8 bg-orange-500 hover:text-orange-500 inline-block rounded-full pt-[3px] hover:bg-gray-200"><i
             className="fa fa-twitter"></i></a> <a href="#"
               className="w-8 h-8 bg-orange-500 hover:text-orange-500 inline-block rounded-full pt-[3px] hover:bg-gray-200"><i
@@ -22,7 +22,8 @@ const Footer = () => {
                       className="w-8 h-8 bg-orange-500 hover:text-orange-500 inline-block rounded-full pt-[3px] hover:bg-gray-200"><i
                         className="fa fa-google"></i></a> <a href="#"
                           className="w-8 h-8 bg-orange-500 hover:text-orange-500 inline-block rounded-full pt-[3px] hover:bg-gray-200"><i
-                            className="fa fa-linkedin"></i></a> </div>
+                            className="fa fa-linkedin"></i></a> */}
+      {/* </div> */}
     </div>
     // </div>
   )

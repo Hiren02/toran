@@ -287,3 +287,7 @@ body .container1 .card1 .box1 .content1 a:hover {
   background: #9aeaf8;
   color: #000;
 }
+
+.loginForm{
+  background-image: url('../public/Images/ground.jpg') no repeat;
+}

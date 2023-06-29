@@ -4,7 +4,7 @@ import myimg from '../../public/img/logo.jpg'
 import Image from 'next/image'
 export default function Header() {
   return (
-    <nav class="bg-orange-400 fixed w-full">
+    <nav class="bg-orange-400 fixed w-full z-10">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
           <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
