@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import logo from '../../public/img/logo.jpg'
 import banner from '../../public/Images/ground.jpg'
