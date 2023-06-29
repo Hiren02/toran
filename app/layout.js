@@ -3,6 +3,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Footer from '@/components/Footer/page'
 import Script from 'next/script'
+import NextTopLoader from 'nextjs-toploader';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className='h-full '>
       <body className={`${inter.className} h-full`} >
+        <NextTopLoader height={5} color="#000000" showSpinner={false} />
         <Script src="../path/to/flatpickr.min.js"></Script>
         <Script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/datepicker.min.js"></Script>
         <Header/>

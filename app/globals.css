@@ -119,12 +119,31 @@ display: flex;
 margin-right: 0;
 }
 .home .home-content .text-1{
-  font-size: 27px;
+  font-size: 40px;
 }
 .home .home-content .text-2{
   font-size: 75px;
   font-weight: 600;
   margin-left: -3px;
+}
+@media  (max-width: 900px) {
+  .home .home-content .text-2{
+  font-size: 40px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+@media  (max-width: 900px) {
+ .home .home-content .text-3{
+  font-size: 30px;
+  margin: 5px 0;
+}
+}
+@media  (max-width: 900px) {
+ .home .home-content .text-1{
+  font-size: 30px;
+}
+}
+
 }
 .home .home-content .text-3{
   font-size: 40px;
@@ -274,7 +293,8 @@ body .container1 .card1 .box1 .content1 a {
   display: inline-block;
   padding: 8px 20px;
   background: black;
-  border-radius: 5px;
+  border:1px solid black;
+  border-radius: 10px ;
   text-decoration: none;
   color: black;
   margin-top: 20px;
@@ -290,4 +310,9 @@ body .container1 .card1 .box1 .content1 a:hover {
 
 .loginForm{
   background-image: url('../public/Images/ground.jpg') no repeat;
+}
+
+.react-date-picker__wrapper {
+  padding: 8px;
+  border-radius: 8px;
 }

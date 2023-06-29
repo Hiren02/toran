@@ -1,113 +1,158 @@
-import Image from 'next/image'
+'use client'
+import React, { useEffect, useRef } from 'react'
+import Typed from 'typed.js';
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    const typedElementRef = useRef(null);
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+    useEffect(() => {
+        const typed = new Typed(typedElementRef.current, {
+            strings: ["Togetherness", "Solidarity", "Unity"],
+            typeSpeed: 100,
+            backSpeed: 60,
+            loop: true
+        });
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        return () => {
+            typed.destroy();
+        };
+    }, []);
+    return (
+        <>
+            <section className="home" id="home">
+                <div className="max-width">
+                    <div className="home-content mt-12">
+                        <div className="text-1">Pleasure of</div>
+                        <div className="text-2 text-orange-400"><span className="typing" ref={typedElementRef}></span></div>
+                        <div className="text-3">By
+                            <span className="text-black font-extrabold"> {process.env.NEXT_PUBLIC_PROJECT_NAME}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+            <section class="w-full mt-1 p-10 lg:-mt-3 bg-white js-show-on-scroll">
+                <div class="undefined items-center w-full   my-0 text-xl font-bold space-x-8 md:space-x-16 pl-4 flex flex-row  md:text-3xl">
+                    <div class="w-1 h-12 pl-1 rounded-md bg-orange-400">
+                    </div>
+                    <span>Your platform for sports</span>
+                </div>
+            </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+            <section class=" relative flex flex-col items-center justify-start w-full p-4 mb-auto rounded-md md:justify-center md:px-4 lg:px-16 md:pt-4 md:pb-16 bg-refSecondary">
+                <div class="flex flex-col items-center justify-start w-full md:justify-center md:flex-row ">
+                    <div class="flex flex-col items-start w-full my-2 space-y-6 md:my-4 lg:space-y-12 md:items-center ">
+                        <div class="flex flex-row items-center justify-start space-x-4">
+                            <div class="relative w-16 h-16 md:w-24 md:h-24">
+                                {/* <span style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:absolute;top:0;left:0;bottom:0;right:0"></span> */}
+                            </div>
+                            <div class="font-semibold leading-6 md:leading-8 text-sm md:text-[18px] lg:text-[20px] md:w-60 text-on_surface">Play with players around you</div>
+                        </div>
+                        <div class="flex flex-row items-center justify-start space-x-4">
+                            <div class="relative w-16 h-16 md:w-24 md:h-24">
+                                {/* <span style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:absolute;top:0;left:0;bottom:0;right:0">
+                                    </span> */}
+                            </div>
+                            <div class="font-semibold leading-6 md:leading-8 text-sm md:text-[18px] lg:text-[20px] md:w-60 text-on_surface">Skill-up your game</div>
+                        </div>
+                    </div>
+                    <div class="relative items-center justify-center hidden w-full lg:flex">
+                        {/* <span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
+                                <span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%">
+                                </span>
+                            </span> */}
+                    </div>
+                    <div class="flex flex-col items-start w-full my-4 space-y-6 lg:space-y-12 md:items-center ">
+                        <div class="flex flex-row items-center justify-start space-x-4">
+                            <div class="relative w-16 h-16 md:w-24 md:h-24">
+                                {/* <span style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:absolute;top:0;left:0;bottom:0;right:0">
+                                    </span> */}
+                            </div>
+                            <div class="font-semibold leading-6 md:leading-8 text-sm md:text-[18px] lg:text-[20px] md:w-60 text-on_surface">Book sports venues nearby</div>
+                        </div>
+                        <div class="flex flex-row items-center justify-start space-x-4">
+                            <div class="relative w-16 h-16 md:w-24 md:h-24">
+                                {/* <span style={"box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:absolute;top:0;left:0;bottom:0;right:0"}>
+                                    </span> */}
+                            </div>
+                            <div class="font-semibold leading-6 md:leading-8 text-sm md:text-[18px] lg:text-[20px] w-56 md:w-60 text-on_surface">Manage your sports activities &amp; groups</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative top-0 w-full mx-10 md:w-auto md:mx-0">
+                    <div class="w-full md:py-4 my-4 bg-white border rounded-md md:my-0">
+                        <div class="grid w-full grid-cols-1 row-gap-8 px-2 divide-y md:divide-x md:divide-y-0 md:grid-cols-4">
+                            <div class="flex flex-col items-center justify-start px-4 py-6 text-center md:text-center md:py-0">
+                                <h6 class="md:mb-4 text-2xl font-bold md:text-3xl">
+                                    2M+</h6>
+                                <p class="md:text-[16px] lg:text-[20px] text-gray-800 ">Users</p>
+                            </div>
+                            <div class="flex flex-col items-center justify-start px-4 py-6  text-center md:text-center md:py-0">
+                                <h6 class="md:mb-4 text-2xl font-bold md:text-3xl">50+
+                                </h6>
+                                <p class="md:text-[16px] lg:text-[20px] text-gray-800 ">Sports</p>
+                            </div>
+                            <div class="flex flex-col items-center justify-start px-4 py-6 md:py-4 text-center md:text-center ">
+                                <h6 class="md:mb-4 text-2xl font-bold md:text-3xl">6M+</h6>
+                                <p class="md:text-[16px] lg:text-[20px] text-gray-800 ">Sports Activities Enabled</p>
+                            </div>
+                            <div class="flex flex-col items-center justify-start px-4 py-6  text-center md:text-center md:py-0">
+                                <h6 class="md:mb-4 text-2xl font-bold md:text-3xl">4M+</h6>
+                                <p class="md:text-[16px] lg:text-[20px] text-gray-800 ">Player Connections Enabled</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+            <div className="project pb-6 bg-white">
+                <div className="flex justify-center bg-white z-auto pt-20 mb-36" id="projectcard">
+                    <div className="container1  bg-gray-200 flex flex-wrap justify-center pt-10 w-auto rounded-2xl">
+                        <div className="card1 bg-sky-100">
+                            <div className="box1 bg-orange-400">
+                                <div className="content1 bg-orange-400">
+                                    <h3>Cricket</h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores sequi, quisquam ea hic exercitationem maiores consequuntur voluptas a ei</p>
+                                    <a href="/sports">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="card1 bg-sky-100">
+                            <div className="box1">
+                                <div className="content1">
+                                    <h3>FootBall</h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores sequi, quisquam ea hic exercitationem maiores consequuntur voluptas a ei</p>
+                                    <a href="">Comming soon...</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="card1 bg-sky-100">
+                            <div className="box1">
+                                <div className="content1">
+                                    <h3>BasketBall</h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores sequi, quisquam ea hic exercitationem maiores consequuntur voluptas a ei</p>
+                                    <a href="">Comming soon...</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="card1 bg-sky-100">
+                            <div className="box1">
+                                <div className="content1">
+                                    <h3>Hockey</h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores sequi, quisquam ea hic exercitationem maiores consequuntur voluptas a ei</p>
+                                    <a href="">Comming soon...</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </>
+    )
 }

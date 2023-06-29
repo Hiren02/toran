@@ -7,8 +7,8 @@ const Footer = () => {
     <div className="bg-gray-900 w-full fixed bottom-0 bottom-footer p-3 flex flex-col text-center pt-5 space-y-8 md:flex-row md:justify-between md:space-y-0">
       <div
         className="flex mx-3 justify-between space-x-20 md:flex-row text-gray-200 md:space-x-28 md:ml-20 lg:ml-24 lg:space-x-[13rem] xl:space-x-72 xl:ml-24">
-        <p>@ Copyright <strong className="text-orange-400">Toran Club </strong>All Rights Reserved</p>
-        <p>Designed by <span className="text-orange-400">Toran Club</span></p>
+        <p>@ Copyright <strong className="text-orange-400">{process.env.NEXT_PUBLIC_PROJECT_NAME} </strong>All Rights Reserved</p>
+        <p>Contact us - <span className="text-orange-400">6356000057</span></p>
       </div>
       {/* <div
         className="text-white pb-4 text-center text-xl space-x-2 md:w-2/4 md:pb-0 md:pl-2 md:space-x-1 lg:pl-[171px] lg:space-x-2 xl:pl-44"> */}

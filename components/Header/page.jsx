@@ -31,11 +31,10 @@ export default function Header() {
             <div class="flex flex-shrink-0 items-center">
               <div class="hidden sm:ml-6 sm:block">
                 <div class="flex space-x-4">
-                  <a href="/home" class="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">Home</a>
                   <a href="/about" class="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">About</a>
                   <a href="/sports" class="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">Book</a>
                   <a href="#" class="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">Contact Us</a>
-
+                  <a href="" class="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">My Booking</a>
                 </div>
               </div>
             </div>
@@ -44,10 +43,11 @@ export default function Header() {
       </div>
       <div class="sm:hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-1 flex justify-center">
-          <a href="/home" class="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">Home</a>
+          {/* <a href="/" class="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">Home</a> */}
           <a href="/about" class="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">About</a>
           <a href="/sports" class="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">Book</a>
-          <a href="#" class="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">Contact Us</a>
+          <a href="#" class="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">Contact</a>
+          <a href="" class="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">My Booking</a>
         </div>
       </div>
     </nav>
