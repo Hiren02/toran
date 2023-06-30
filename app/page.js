@@ -6,6 +6,7 @@ import img2 from '../public/Images/2.png'
 import img3 from '../public/Images/3.png'
 import img4 from '../public/Images/4.png'
 import img5 from '../public/Images/5.svg'
+import myimg from '../public/img/logo.jpg'
 
 import Image from 'next/image';
 export default function Home() {
@@ -68,7 +69,7 @@ export default function Home() {
                                     bottom: 0,
                                     right: 0
                                 }}>
-                                    <Image src={img1} alt='icons'/>
+                                    <Image src={img1} alt='icons' />
                                 </span>
                             </div>
                             <div className="font-semibold leading-6 md:leading-8 text-sm md:text-[18px] lg:text-[20px] md:w-60 text-on_surface">Play with players around you</div>
@@ -92,7 +93,7 @@ export default function Home() {
                                     bottom: 0,
                                     right: 0
                                 }}>
-                                    <Image src={img2} alt='icons'/>
+                                    <Image src={img2} alt='icons' />
                                 </span>
                             </div>
                             <div className="font-semibold leading-6 md:leading-8 text-sm md:text-[18px] lg:text-[20px] md:w-60 text-on_surface">Skill-up your game</div>
@@ -125,7 +126,7 @@ export default function Home() {
                                 padding: 0,
                                 maxWidth: '100%'
                             }}>
-                                <Image src={img5} alt='icons'/>
+                                <Image src={img5} alt='icons' />
                             </span>
                         </span>
                     </div>
@@ -149,7 +150,7 @@ export default function Home() {
                                     bottom: 0,
                                     right: 0
                                 }}>
-                                    <Image src={img3} alt='icons'/>
+                                    <Image src={img3} alt='icons' />
                                 </span>
                             </div>
                             <div className="font-semibold leading-6 md:leading-8 text-sm md:text-[18px] lg:text-[20px] md:w-60 text-on_surface">Book sports venues nearby</div>
@@ -173,7 +174,7 @@ export default function Home() {
                                     bottom: 0,
                                     right: 0
                                 }}>
-                                    <Image src={img4} alt='icons'/>
+                                    <Image src={img4} alt='icons' />
                                 </span>
                             </div>
                             <div className="font-semibold leading-6 md:leading-8 text-sm md:text-[18px] lg:text-[20px] w-56 md:w-60 text-on_surface">Manage your sports activities &amp; groups</div>
@@ -207,7 +208,7 @@ export default function Home() {
             </section>
 
             <div className="project pb-6 bg-white">
-                <div className="flex justify-center bg-white z-auto pt-20 mb-36" id="projectcard">
+                <div className="flex justify-center bg-white z-auto pt-20 mb-14" id="projectcard">
                     <div className="container1  bg-gray-200 flex flex-wrap justify-center pt-10 w-auto rounded-2xl">
                         <div className="card1 bg-sky-100">
                             <div className="box1 bg-orange-400">
@@ -251,7 +252,20 @@ export default function Home() {
                 </div>
             </div>
 
+            <div className="flex justify-center pt-2 pb-24 bg-blue-50" id='contactus'>
+                <div className="flex flex-col max-w-7xl justify-center items-center">
+                    <div className="overflow-hidden w-3/4 bg-white m-6 p-6 shadow-lg flex flex-col md:flex-row justify-center shadow-gray-600  rounded-xl">
+                        <div className="h-26 w-52 overflow-hidden"><Image  width={'100%'} height={'100%'} src={myimg}
+                            alt="cricket" className="" /> </div>
+                        <div className="grid p-2">
+                            <div className="font-bold text-lg text-black m-2 ">Address : Behid Shell Petrol Pump, Near D-Mart, Ahmedabad Highway, Palanpur, Gujarat </div>
+                               
+                            <div className=" m-2 text-sm"><span className='font-bold text-xl text-black'>Mobile :</span><span className=' text-orange-600 text-xl'> 6356000057 </span></div>
+                        </div>
+                    </div>
 
+                </div>
+            </div>
 
         </>
     )

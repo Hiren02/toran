@@ -33,7 +33,7 @@ export default function Header() {
                 <div className="flex space-x-4">
                   <a href="/about" className="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">About</a>
                   <a href="/sports" className="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">Book</a>
-                  <a href="#" className="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">Contact Us</a>
+                  <a href="#contactus" className="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">Contact Us</a>
                   <a href="/mybooking" className="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">My Booking</a>
                 </div>
               </div>
