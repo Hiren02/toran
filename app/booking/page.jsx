@@ -17,11 +17,94 @@ export default function Booking() {
   const onHideModal = () => {
     setShow(false)
   }
+
+  const timeSlot = [
+    {
+      id: "1",
+      time: "6-7 AM",
+    },
+    {
+      id: "2",
+      time: "7-8 AM",
+    },
+    {
+      id: "3",
+      time: "8-9 AM",
+    },
+    {
+      id: "4",
+      time: "9-10 AM",
+    },
+    {
+      id: "5",
+      time: "10-11 AM",
+    },
+    {
+      id: "6",
+      time: "11-12 AM",
+    },
+    {
+      id: "7",
+      time: "12-1 PM",
+    },
+    {
+      id: "8",
+      time: "1-2 PM",
+    },
+    {
+      id: "9",
+      time: "2-3 PM",
+    },
+    {
+      id: "1",
+      time: "3-4 PM",
+    },
+    {
+      id: "10",
+      time: "4-5 PM",
+    },
+    {
+      id: "11",
+      time: "5-6 PM",
+    },
+    {
+      id: "12",
+      time: "6-7 PM",
+    },
+    {
+      id: "13",
+      time: "7-8 PM",
+    },
+    {
+      id: "14",
+      time: "8-9 PM",
+    },
+    {
+      id: "15",
+      time: "9-10 PM",
+    },
+    {
+      id: "16",
+      time: "10-11 PM",
+    },
+    {
+      id: "17",
+      time: "11-12 PM",
+    },
+    {
+      id: "18",
+      time: "12-1 AM",
+    },
+    {
+      id: "19",
+      time: "1-2 AM",
+    }
+  ]
   return (
     <div className='pt-36 pb-36'>
       <div className="flex justify-center h-100">
-        <div className="w-4/5 my-5 mx-auto flex bg-gray-100 flex-col items-center md:flex-row ">
-          <div className="border w-[70%] h-full  text-orange-500 p-10"> <span>
+        <div className="w-full lg:w-4/5 my-5 mx-auto flex bg-gray-100 flex-col items-center md:flex-row ">
+          <div className="border w-full h-full  text-orange-500 p-10"> <span>
             <h1 className="text-3xl font-semibold text-center mb-4 text-orange-400 pt-3">Confirm Your Booking</h1>
             {/* <p className="text-xs font-normal mt-2 text-center">Contact us by filling this contact form. </p> */}
           </span>
@@ -65,14 +148,28 @@ export default function Booking() {
                           />
                         </div>
                       </div>
-                      <div className='col-span-6'>
+                      <div className='col-span-4'>
                         <div className='mb-4'>
                           <label className='pl-4 pb-3 text-md'>Time slot</label>
-                          <div className='rounded-xl p-3 border-spacing-3 w-full border-2 border-midextralightgray'>
+                          <div className='rounded-xl flex items-center flex-wrap p-1 border-spacing-3 w-full border-2 border-midextralightgray'>
                             {/* <select multiple> */}
-                            {/* {/* <option className='bg-white rounded-xl p-2 m-1'>6-7AM</option> */}
-                            <span className='bg-white text-black border-gray-400 border-2   rounded-xl p-2 m-1'>10-11 PM</span>
-                            {/* </select> */}
+                            {/* <span className='bg-white text-black border-gray-400 border-2   rounded-xl p-2 m-1'>10-11 PM</span> */}
+                            {timeSlot.map(({ id, time }) => (
+                              <div key={id + "_" + time} className="customCunltCheckbox relative mb-2 mr-2 last:mr-0">
+                                <input
+                                  type="checkbox"
+                                  value={id}
+                                  className="checkboxCunltInput absolute left-0 right-0 top-0 bottom-0 h-full w-full cursor-pointer opacity-0"
+                                // onChange={(e) => handleOnClick(e)}
+                                // checked={id ? symptId.includes(Number(id)) : false}
+                                />
+                                <div key={id + "_" + time} className="checkboxCunltLabel flex items-center justify-center rounded-3xl bg-xsextralightgray px-1 py-1 text-xs">
+                                  <span className='border-2 border-orange-300 text-lg p-1 m-1 text-black bg-white rounded-xl'>
+                                    {time}
+                                  </span>
+                                </div>
+                              </div>))}
+
                           </div>
                         </div>
                       </div>
