@@ -6,7 +6,7 @@ import { Controller, useForm } from 'react-hook-form';
 import DatePicker from 'react-date-picker'
 import 'react-date-picker/dist/DatePicker.css';
 import 'react-calendar/dist/Calendar.css';
-import RulesModal from '@/components/FeedBackModal/page';
+import RulesModal from '@/components/RulesModel/page';
 
 export default function Booking() {
   const { control } = useForm()
