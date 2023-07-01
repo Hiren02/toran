@@ -2,15 +2,17 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XCloseIcn } from './Icon/page'
+import { useRouter } from 'next/navigation'
 
 const RulesModal = ({ onHideModal }) => {
   const [isOpenFeedBackModal, setIsOpenFeedBackModal] = useState(true)
+  const router = useRouter()
   const onClose = () => {
     setIsOpenFeedBackModal(false)
     onHideModal()
   }
   const onContinue = () => {
-
+    router.push('/mybooking')
   }
   return (
     <>
