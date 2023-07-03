@@ -189,20 +189,20 @@ export default function Booking() {
               <h2 className='text-orange-400 font-extrabold text-3xl pr-5'> Your cart</h2>
             </div>
             <div>
-              <label className='font-bold pr-6 text-xl'>Sports: </label>
-              <span className='text-xl p-1'>Cricket</span>
+              <label className='font-bold pr-6 text-xl text-black'>Sports: </label>
+              <span className='text-xl p-1 text-black'>Cricket</span>
             </div>
             <div>
-              <label className='font-bold text-xl'>Date: </label>
-              <span className='text-xl p-1 pl-2 ' >30/06/2023</span>
+              <label className='font-bold text-xl text-black'>Date: </label>
+              <span className='text-xl p-1 pl-2 text-black ' >30/06/2023</span>
             </div>
             <div>
-              <label className='font-bold pr-6 text-xl'>Time: </label>
-              <span className='text-xl p-1'>10-11 PM</span>
+              <label className='font-bold pr-6 text-xl text-black'>Time: </label>
+              <span className='text-xl p-1 text-black'>10-11 PM</span>
             </div>
             <div>
-              <label className='font-bold pr-6 text-xl'>Total Price: </label>
-              <span className='text-xl  p-1'>₹ 500</span>
+              <label className='font-bold pr-6 text-xl text-black'>Total Price: </label>
+              <span className='text-xl  p-1 text-black'>₹ 500</span>
             </div>
             <div>
               <button className='inline-block primary-buttons text-black bg-orange-400 font-bold text-sm bg-primary border border-primary uppercase rounded-2xl px-5 py-3 mr-4 hover:transition-all hover:border-spacing-5 hover:bg-orange-500 lg:text-base' onClick={() => onShowModal()}>Procced to pay</button>

@@ -43,7 +43,7 @@ export default function Home() {
                 <div className="undefined items-center w-full   my-0 text-xl font-bold space-x-8 md:space-x-16 pl-4 flex flex-row  md:text-3xl">
                     <div className="w-1 h-12 pl-1 rounded-md bg-orange-400">
                     </div>
-                    <span>Your platform for sports</span>
+                    <span className='text-black'>Your platform for sports</span>
                 </div>
             </section>
 
@@ -185,21 +185,21 @@ export default function Home() {
                     <div className="w-full md:py-4 my-4 bg-white border rounded-md md:my-0">
                         <div className="grid w-full grid-cols-1 row-gap-8 px-2 divide-y md:divide-x md:divide-y-0 md:grid-cols-4">
                             <div className="flex flex-col items-center justify-start px-4 py-6 text-center md:text-center md:py-0">
-                                <h6 className="md:mb-4 text-2xl font-bold md:text-3xl">
+                                <h6 className="md:mb-4 text-2xl font-bold md:text-3xl text-black">
                                     2M+</h6>
                                 <p className="md:text-[16px] lg:text-[20px] text-gray-800 ">Users</p>
                             </div>
                             <div className="flex flex-col items-center justify-start px-4 py-6  text-center md:text-center md:py-0">
-                                <h6 className="md:mb-4 text-2xl font-bold md:text-3xl">50+
+                                <h6 className="md:mb-4 text-2xl font-bold md:text-3xl text-black">50+
                                 </h6>
                                 <p className="md:text-[16px] lg:text-[20px] text-gray-800 ">Sports</p>
                             </div>
-                            <div className="flex flex-col items-center justify-start px-4 py-6 md:py-4 text-center md:text-center ">
-                                <h6 className="md:mb-4 text-2xl font-bold md:text-3xl">6M+</h6>
+                            <div className="flex flex-col items-center justify-start px-4 py-6 md:py-0 text-center md:text-center ">
+                                <h6 className="md:mb-4 text-2xl font-bold md:text-3xl text-black">6M+</h6>
                                 <p className="md:text-[16px] lg:text-[20px] text-gray-800 ">Sports Activities Enabled</p>
                             </div>
                             <div className="flex flex-col items-center justify-start px-4 py-6  text-center md:text-center md:py-0">
-                                <h6 className="md:mb-4 text-2xl font-bold md:text-3xl">4M+</h6>
+                                <h6 className="md:mb-4 text-2xl font-bold md:text-3xl text-black">4M+</h6>
                                 <p className="md:text-[16px] lg:text-[20px] text-gray-800 ">Player Connections Enabled</p>
                             </div>
                         </div>
