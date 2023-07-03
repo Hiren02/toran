@@ -13,7 +13,7 @@ export default function Sports() {
         <div className="w-full pt-32 pb-28 bg-white px-5">
             <div className="flex flex-col justify-between w-full ">
                 <div className="w-full mb-5 border_radius md:hidden bg-surface">
-                    <div className="relative overflow-hidden rounded-md h-56 sm:h-100 ">
+                    <div className="relative overflow-hidden rounded-md h-44 sm:h-300 md:h-400 lg:500">
                         <div className="slide">
                             <span style={{
                                 boxSizing: 'border-box',
@@ -74,7 +74,7 @@ export default function Sports() {
                                 bottom: 0,
                                 right: 0
                             }}>
-                                <Image src={des} alt='slider'/>
+                                <Image src={des} alt='slider' />
                             </span>
                         </div>
                         <div className="slide">
@@ -95,7 +95,7 @@ export default function Sports() {
                                 bottom: 0,
                                 right: 0
                             }}>
-                                <Image src={des} alt='slider'/>
+                                <Image src={des} alt='slider' />
                             </span>
                         </div>
                         <div className="slide active-anim">
@@ -116,7 +116,7 @@ export default function Sports() {
                                 bottom: 0,
                                 right: 0
                             }}>
-                                <Image src={des} alt='slider'/>
+                                <Image src={des} alt='slider' />
                             </span>
                         </div>
                         <div className="slide">
@@ -137,7 +137,7 @@ export default function Sports() {
                                 bottom: 0,
                                 right: 0
                             }}>
-                                <Image src={des} alt='slider'/>
+                                <Image src={des} alt='slider' />
                             </span>
                         </div>
                         <div className="absolute flex justify-center w-full bottom-2">
@@ -206,7 +206,7 @@ export default function Sports() {
             </div>
             <div className="grid w-full grid-cols-1 gap-2 mt-6 md:gap-x-5 md:grid-cols-3">
                 <div className="hidden w-full row-span-1 bg-opacity-50 border_radius backdrop-blur-lg bg-surface md:block md:col-span-2 ">
-                    <div className="relative overflow-hidden rounded-md h-44 sm:h-100 ">
+                    <div className="relative overflow-hidden rounded-md h-44 sm:h-300 md:h-400 lg:500">
                         <div className="slide">
                             <span style={{
                                 boxSizing: 'border-box',
@@ -225,7 +225,7 @@ export default function Sports() {
                                 bottom: 0,
                                 right: 0
                             }}>
-                                <Image src={des} alt='slider'/>
+                                <Image src={des} alt='slider' />
                             </span>
                         </div>
                         <div className="slide">
@@ -246,7 +246,7 @@ export default function Sports() {
                                 bottom: 0,
                                 right: 0
                             }}>
-                                <Image src={des} alt='slider'/>
+                                <Image src={des} alt='slider' />
                             </span>
                         </div>
                         <div className="slide">
@@ -267,7 +267,7 @@ export default function Sports() {
                                 bottom: 0,
                                 right: 0
                             }}>
-                                <Image src={des} alt='slider'/>
+                                <Image src={des} alt='slider' />
                             </span>
                         </div>
                         <div className="slide">
@@ -288,7 +288,7 @@ export default function Sports() {
                                 bottom: 0,
                                 right: 0
                             }}>
-                                <Image src={des} alt='slider'/>
+                                <Image src={des} alt='slider' />
                             </span>
                         </div>
                         <div className="slide active-anim">
@@ -309,7 +309,7 @@ export default function Sports() {
                                 bottom: 0,
                                 right: 0
                             }}>
-                                <Image src={des} alt='slider'/>
+                                <Image src={des} alt='slider' />
                             </span>
                         </div>
                         <div className="slide">
@@ -330,7 +330,7 @@ export default function Sports() {
                                 bottom: 0,
                                 right: 0
                             }}>
-                                <Image src={des} alt='slider'/>
+                                <Image src={des} alt='slider' />
                             </span>
                         </div>
                         <div className="absolute flex justify-center w-full bottom-2">
@@ -370,7 +370,7 @@ export default function Sports() {
                         </div>
                         <div className="grid items-center w-full grid-cols-3 gap-5 mt-5 sm:gap-6 sm:grid-cols-5 lg:gap-6 xl:grid-cols-7 border_container ">
                             <div className="flex flex-col items-center py-1 border rounded-xl border-orange-400  shadow-md cursor-pointer hover:border-primary hover:border-2 aspect-square border-border_color">
-                            <span style={{
+                                <span style={{
                                     boxSizing: 'border-box',
                                     display: 'inline-block',
                                     overflow: 'hidden',
@@ -396,8 +396,8 @@ export default function Sports() {
                                         padding: '0px',
                                         maxWidth: '100%'
                                     }}>
-                                </span>
-                                <Image src={cric} alt='cricket-icon'/>
+                                    </span>
+                                    <Image src={cric} alt='cricket-icon' />
                                     <noscript></noscript>
                                 </span>
                                 <h3 className="flex justify-center w-full mt-1 text-lg font-medium text-center text-border_tag"> Cricket</h3>
@@ -429,8 +429,8 @@ export default function Sports() {
                                         padding: '0px',
                                         maxWidth: '100%'
                                     }}>
-                                </span>
-                                <Image src={football} alt='football-icon'/>
+                                    </span>
+                                    <Image src={football} alt='football-icon' />
                                     <noscript></noscript>
                                 </span>
                                 <h3 className="flex justify-center w-full mt-1 text-lg font-medium text-center text-border_tag"> Football</h3>

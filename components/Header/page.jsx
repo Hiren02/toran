@@ -23,8 +23,8 @@ export default function Header() {
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center">
-             <a href='/'> <Image className="block h-14 w-28 lg:hidden " src={myimg} alt="Your Company" /></a>
-             <a href='/'> <Image className="hidden h-14 w-28 lg:block" src={myimg} alt="Your Company" /></a>
+              <a href='/'> <Image className="block h-14 w-28 lg:hidden " src={myimg} alt="Your Company" /></a>
+              <a href='/'> <Image className="hidden h-14 w-28 lg:block" src={myimg} alt="Your Company" /></a>
             </div>
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-end">
@@ -33,7 +33,7 @@ export default function Header() {
                 <div className="flex space-x-4">
                   <a href="/about" className="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">About</a>
                   <a href="/sports" className="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">Book</a>
-                  <a href="#contactus" className="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">Contact Us</a>
+                  <a href="/#contactus" className="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">Contact Us</a>
                   <a href="/mybooking" className="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">My Booking</a>
                 </div>
               </div>
@@ -46,7 +46,7 @@ export default function Header() {
           {/* <a href="/" className="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">Home</a> */}
           <a href="/about" className="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">About</a>
           <a href="/sports" className="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">Book</a>
-          <a href="#" className="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">Contact</a>
+          <a href="/#contactus" className="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">Contact</a>
           <a href="/mybooking" className="text-gray-800 hover:bg-cyan-100 hover:text-black rounded-md px-3 py-2 text-sm font-medium">My Booking</a>
         </div>
       </div>
