@@ -51,7 +51,7 @@ const RulesModal = ({ onHideModal }) => {
                   </button>
                   <Dialog.Title
                     as="h3"
-                    className="text-2xl font-bold text-center"
+                    className="text-2xl font-bold text-center text-black"
                   >
                     Rules
                   </Dialog.Title>
@@ -61,11 +61,11 @@ const RulesModal = ({ onHideModal }) => {
                       </div>
                       <div className='patient-details sm:w-[calc(100%_-_104px)] border-b-2 border-midextralightgray'>
                         <div className='flex mb-3 w-full'>
-                          <div className='text-semilightgray pr-3 w-1/3 text-base md:text-lg'>Rules 1</div>
+                          <div className='text-semilightgray pr-3 w-1/3 text-base md:text-lg text-black'>Rules 1</div>
                           <div className='font-bold w-2/3 text-base md:text-lg'></div>
                         </div>
                         <div className='flex mb-3 w-full'>
-                          <div className='text-semilightgray pr-3 w-1/3 text-base md:text-lg'>Rules 2</div>
+                          <div className='text-semilightgray pr-3 w-1/3 text-base md:text-lg text-black'>Rules 2</div>
                         </div>
                       </div>
                     </div>
