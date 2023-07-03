@@ -70,7 +70,7 @@ const RulesModal = ({ onHideModal }) => {
                       </div>
                     </div>
                   </div>
-                  <div className='pl-64'>
+                  <div className='pl-24 md:pl-64'>
                     <button className='text-center bg-orange-400 border-2 text-xl rounded-xl p-2 m-1' onClick={onContinue}>Continue</button>
                   </div>
                 </Dialog.Panel>
