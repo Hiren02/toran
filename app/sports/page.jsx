@@ -2,143 +2,46 @@
 import Image from 'next/image'
 import React from 'react'
 import des from '../../public/img/des.jpg'
+import cricket from '../../public/Images/cricket.jpeg'
 import cric from '../../public/Images/criclet.png'
 import football from '../../public/Images/fooot.png'
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 export default function Sports() {
     const router = useRouter()
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 1000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        swipeToSlide: true,
+        autoplay: true,
+        autoplaySpeed: 3000
+
+    };
     return (
 
         <div className="w-full pt-32 pb-28 bg-white px-5">
             <div className="flex flex-col justify-between w-full ">
                 <div className="w-full mb-5 border_radius md:hidden bg-surface">
                     <div className="relative overflow-hidden rounded-md h-44 sm:h-300 md:h-400 lg:500">
-                        <div className="slide">
-                            <span style={{
-                                boxSizing: 'border-box',
-                                display: 'block',
-                                overflow: 'hidden',
-                                width: 'initial',
-                                height: 'initial',
-                                background: 'none',
-                                opacity: 1,
-                                border: 0,
-                                margin: 0,
-                                padding: 0,
-                                position: 'absolute',
-                                top: 0,
-                                left: 0,
-                                bottom: 0,
-                                right: 0
-                            }}>
-                                <Image src={des} alt='slider' />
-                            </span>
-                        </div>
-                        <div className="slide">
-                            <span style={{
-                                boxSizing: 'border-box',
-                                display: 'block',
-                                overflow: 'hidden',
-                                width: 'initial',
-                                height: 'initial',
-                                background: 'none',
-                                opacity: 1,
-                                border: 0,
-                                margin: 0,
-                                padding: 0,
-                                position: 'absolute',
-                                top: 0,
-                                left: 0,
-                                bottom: 0,
-                                right: 0
-                            }}>
-                                <Image src={des} alt='slider' />
-                            </span>
-                        </div>
-                        <div className="slide">
-                            <span style={{
-                                boxSizing: 'border-box',
-                                display: 'block',
-                                overflow: 'hidden',
-                                width: 'initial',
-                                height: 'initial',
-                                background: 'none',
-                                opacity: 1,
-                                border: 0,
-                                margin: 0,
-                                padding: 0,
-                                position: 'absolute',
-                                top: 0,
-                                left: 0,
-                                bottom: 0,
-                                right: 0
-                            }}>
-                                <Image src={des} alt='slider' />
-                            </span>
-                        </div>
-                        <div className="slide">
-                            <span style={{
-                                boxSizing: 'border-box',
-                                display: 'block',
-                                overflow: 'hidden',
-                                width: 'initial',
-                                height: 'initial',
-                                background: 'none',
-                                opacity: 1,
-                                border: 0,
-                                margin: 0,
-                                padding: 0,
-                                position: 'absolute',
-                                top: 0,
-                                left: 0,
-                                bottom: 0,
-                                right: 0
-                            }}>
-                                <Image src={des} alt='slider' />
-                            </span>
-                        </div>
-                        <div className="slide active-anim">
-                            <span style={{
-                                boxSizing: 'border-box',
-                                display: 'block',
-                                overflow: 'hidden',
-                                width: 'initial',
-                                height: 'initial',
-                                background: 'none',
-                                opacity: 1,
-                                border: 0,
-                                margin: 0,
-                                padding: 0,
-                                position: 'absolute',
-                                top: 0,
-                                left: 0,
-                                bottom: 0,
-                                right: 0
-                            }}>
-                                <Image src={des} alt='slider' />
-                            </span>
-                        </div>
-                        <div className="slide">
-                            <span style={{
-                                boxSizing: 'border-box',
-                                display: 'block',
-                                overflow: 'hidden',
-                                width: 'initial',
-                                height: 'initial',
-                                background: 'none',
-                                opacity: 1,
-                                border: 0,
-                                margin: 0,
-                                padding: 0,
-                                position: 'absolute',
-                                top: 0,
-                                left: 0,
-                                bottom: 0,
-                                right: 0
-                            }}>
-                                <Image src={des} alt='slider' />
-                            </span>
-                        </div>
+                        <Slider {...settings} className='c-slider'>
+                            <div >
+                                <Image src={des} alt='image'></Image>
+                            </div>
+                            <div>
+                                <Image src={des} alt='image'></Image>
+                            </div>
+                            <div>
+                                <Image src={des} alt='image'></Image>
+                            </div>
+                            <div>
+                                <Image src={des} alt='image'></Image>
+                            </div>
+                        </Slider>
                         <div className="absolute flex justify-center w-full bottom-2">
                             <div className="rounded-xl cursor-pointer border-white border-2 h-3 my-0 mx-1 w-3 bg-gray-500">
                             </div>
@@ -206,132 +109,20 @@ export default function Sports() {
             <div className="grid w-full grid-cols-1 gap-2 mt-6 md:gap-x-5 md:grid-cols-3">
                 <div className="hidden w-full row-span-1 bg-opacity-50 border_radius backdrop-blur-lg bg-surface md:block md:col-span-2 ">
                     <div className="relative overflow-hidden rounded-md h-44 sm:h-300 md:h-400 lg:500">
-                        <div className="slide">
-                            <span style={{
-                                boxSizing: 'border-box',
-                                display: 'block',
-                                overflow: 'hidden',
-                                width: 'initial',
-                                height: 'initial',
-                                background: 'none',
-                                opacity: 1,
-                                border: 0,
-                                margin: 0,
-                                padding: 0,
-                                position: 'absolute',
-                                top: 0,
-                                left: 0,
-                                bottom: 0,
-                                right: 0
-                            }}>
-                                <Image src={des} alt='slider' />
-                            </span>
-                        </div>
-                        <div className="slide">
-                            <span style={{
-                                boxSizing: 'border-box',
-                                display: 'block',
-                                overflow: 'hidden',
-                                width: 'initial',
-                                height: 'initial',
-                                background: 'none',
-                                opacity: 1,
-                                border: 0,
-                                margin: 0,
-                                padding: 0,
-                                position: 'absolute',
-                                top: 0,
-                                left: 0,
-                                bottom: 0,
-                                right: 0
-                            }}>
-                                <Image src={des} alt='slider' />
-                            </span>
-                        </div>
-                        <div className="slide">
-                            <span style={{
-                                boxSizing: 'border-box',
-                                display: 'block',
-                                overflow: 'hidden',
-                                width: 'initial',
-                                height: 'initial',
-                                background: 'none',
-                                opacity: 1,
-                                border: 0,
-                                margin: 0,
-                                padding: 0,
-                                position: 'absolute',
-                                top: 0,
-                                left: 0,
-                                bottom: 0,
-                                right: 0
-                            }}>
-                                <Image src={des} alt='slider' />
-                            </span>
-                        </div>
-                        <div className="slide">
-                            <span style={{
-                                boxSizing: 'border-box',
-                                display: 'block',
-                                overflow: 'hidden',
-                                width: 'initial',
-                                height: 'initial',
-                                background: 'none',
-                                opacity: 1,
-                                border: 0,
-                                margin: 0,
-                                padding: 0,
-                                position: 'absolute',
-                                top: 0,
-                                left: 0,
-                                bottom: 0,
-                                right: 0
-                            }}>
-                                <Image src={des} alt='slider' />
-                            </span>
-                        </div>
-                        <div className="slide active-anim">
-                            <span style={{
-                                boxSizing: 'border-box',
-                                display: 'block',
-                                overflow: 'hidden',
-                                width: 'initial',
-                                height: 'initial',
-                                background: 'none',
-                                opacity: 1,
-                                border: 0,
-                                margin: 0,
-                                padding: 0,
-                                position: 'absolute',
-                                top: 0,
-                                left: 0,
-                                bottom: 0,
-                                right: 0
-                            }}>
-                                <Image src={des} alt='slider' />
-                            </span>
-                        </div>
-                        <div className="slide">
-                            <span style={{
-                                boxSizing: 'border-box',
-                                display: 'block',
-                                overflow: 'hidden',
-                                width: 'initial',
-                                height: 'initial',
-                                background: 'none',
-                                opacity: 1,
-                                border: 0,
-                                margin: 0,
-                                padding: 0,
-                                position: 'absolute',
-                                top: 0,
-                                left: 0,
-                                bottom: 0,
-                                right: 0
-                            }}>
-                                <Image src={des} alt='slider' />
-                            </span>
-                        </div>
+                        <Slider {...settings} className='c-slider'>
+                            <div>
+                                <Image src={des} alt='image'></Image>
+                            </div>
+                            <div>
+                                <Image src={des} alt='image'></Image>
+                            </div>
+                            <div>
+                                <Image src={des} alt='image'></Image>
+                            </div>
+                            <div>
+                                <Image src={des} alt='image'></Image>
+                            </div>
+                        </Slider>
                         <div className="absolute flex justify-center w-full bottom-2">
                             <div className="rounded-xl cursor-pointer border-white border-2 h-3 my-0 mx-1 w-3 bg-gray-500"></div>
                             <div className="rounded-xl cursor-pointer border-white border-2 h-3 my-0 mx-1 w-3 bg-gray-500"></div>
@@ -357,7 +148,7 @@ export default function Sports() {
                         <div className="flex flex-col h-auto p-4 mt-5 border rounded-xl border-orange-400 "><div className="font-semibold text-md md:text-lg">Location</div>
                             <h2 className="my-2 text-black">Behid Shell Petrol Pump, Near D-Mart, Ahmedabad Highway, Palanpur, Gujarat</h2>
                             <div className="">
-                                <iframe height="250" loading="lazy" width="100%" id="myIframe" frameborder="0" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyB9q4uF6xjrDG-n2jvClxrtOV_jSXUAPUY&amp;center=12.987796581378571,77.55990734156832&amp;zoom=18" allowfullscreen=""></iframe>
+                                <iframe height="250" loading="lazy" width="100%" id="myIframe" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyB9q4uF6xjrDG-n2jvClxrtOV_jSXUAPUY&amp;center=12.987796581378571,77.55990734156832&amp;zoom=18" allowFullScreen=""></iframe>
                             </div>
                         </div>
 

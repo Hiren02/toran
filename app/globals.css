@@ -303,3 +303,6 @@ body .container1 .card1 .box1 .content1 a:hover {
   border-radius: 8px;
 }
 
+.c-slider .slick-track{
+  display: flex;
+}
