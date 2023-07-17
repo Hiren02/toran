@@ -1,4 +1,30 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
 
-module.exports = nextConfig
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    appDir: true,
+    
+  },
+  modularizeImports: {
+      lodash: {
+        transform: 'lodash/{{member}}',
+      },
+    },
+  devIndicators: {
+    buildActivity: true,
+  },
+  reactStrictMode: true,
+  trailingSlash: false,
+  optimizeFonts: true,
+  images: {
+    domains: ['localhost'],
+  }
+}
+
+module.exports = () => {
+  const plugins = [withBundleAnalyzer]
+  return plugins.reduce((acc, plugin) => plugin(acc), { ...nextConfig })
+}  
