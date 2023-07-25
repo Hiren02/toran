@@ -11,8 +11,10 @@
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@headlessui/react": "^1.7.15",
+    "@hookform/resolvers": "^3.1.1",
     "@tailwindcss/forms": "^0.5.3",
     "autoprefixer": "10.4.14",
+    "axios": "^1.4.0",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
     "next": "13.4.7",
@@ -27,6 +29,7 @@
     "sharp": "^0.32.1",
     "slick-carousel": "^1.8.1",
     "tailwindcss": "3.3.2",
-    "typed.js": "^2.0.16"
+    "typed.js": "^2.0.16",
+    "yup": "^1.2.0"
   }
 }
