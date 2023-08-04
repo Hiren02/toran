@@ -7,7 +7,8 @@ const Footer = () => {
     <div className="bg-gray-900 w-full fixed bottom-0 bottom-footer p-3 flex flex-col text-center pt-5 space-y-8 md:flex-row md:justify-between md:space-y-0">
       <div
         className="flex mx-3 justify-between space-x-20 md:flex-row text-gray-200 md:space-x-28 md:ml-20 lg:ml-24 lg:space-x-[13rem] xl:space-x-72 xl:ml-24">
-        <p>@ Copyright <strong className="text-orange-400">{process.env.NEXT_PUBLIC_PROJECT_NAME} </strong>All Rights Reserved</p>
+        <p>@ Copyright <strong className="text-orange-400">MCBYSTAR FUN N FOOD LLP </strong>All Rights Reserved</p>
+        <p><strong className="text-orange-400">Created by </strong>Hiren - 9484462682 | Manan- 9327947244</p>
         <p>Contact us - <span className="text-orange-400">6356000057</span></p>
       </div>
       {/* <div

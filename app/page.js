@@ -14,7 +14,7 @@ export default function Home() {
 
     useEffect(() => {
         const typed = new Typed(typedElementRef.current, {
-            strings: ["Togetherness", "Solidarity", "Unity"],
+            strings: ["Cricket", "Swimming Pool", "Gym", "food"],
             typeSpeed: 100,
             backSpeed: 60,
             loop: true
@@ -29,7 +29,7 @@ export default function Home() {
             <section className="home" id="home">
                 <div className="max-width">
                     <div className="home-content mt-12">
-                        <div className="text-1">Pleasure of</div>
+                        <div className="text-1">Life's symphony plays <br /> beautifully with</div>
                         <div className="text-2 text-orange-400"><span className="typing" ref={typedElementRef}></span></div>
                         <div className="text-3">By
                             <span className="text-black font-extrabold"> {process.env.NEXT_PUBLIC_PROJECT_NAME}
@@ -153,7 +153,7 @@ export default function Home() {
                                     <Image src={img3} alt='icons' />
                                 </span>
                             </div>
-                            <div className="font-semibold leading-6 md:leading-8 text-sm md:text-[18px] lg:text-[20px] md:w-60 text-on_surface">Book sports venues nearby</div>
+                            <div className="font-semibold leading-6 md:leading-8 text-sm md:text-[18px] lg:text-[20px] md:w-60 text-on_surface">Book sports venues</div>
                         </div>
                         <div className="flex flex-row items-center justify-start space-x-4">
                             <div className="relative w-16 h-16 md:w-24 md:h-24">
@@ -213,8 +213,8 @@ export default function Home() {
                         <div className="card1 bg-sky-100">
                             <div className="box1 bg-orange-400">
                                 <div className="content1 bg-orange-400">
-                                    <h3>Cricket</h3>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores sequi, quisquam ea hic exercitationem maiores consequuntur voluptas a ei</p>
+                                    <h3>Cricket / FootBall</h3>
+                                    <p><span className='text-xl'>Swinging the bat with finesse</span></p>
                                     <a href="/sports">Book Now</a>
                                 </div>
                             </div>
@@ -223,8 +223,8 @@ export default function Home() {
                         <div className="card1 bg-sky-100">
                             <div className="box1">
                                 <div className="content1">
-                                    <h3>FootBall</h3>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores sequi, quisquam ea hic exercitationem maiores consequuntur voluptas a ei</p>
+                                    <h3>Swimming Pool</h3>
+                                    <p><span className='text-xl'>diving into clear waters</span></p>
                                     <a href="">Comming soon...</a>
                                 </div>
                             </div>
@@ -232,8 +232,8 @@ export default function Home() {
                         <div className="card1 bg-sky-100">
                             <div className="box1">
                                 <div className="content1">
-                                    <h3>BasketBall</h3>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores sequi, quisquam ea hic exercitationem maiores consequuntur voluptas a ei</p>
+                                    <h3>Food</h3>
+                                    <p><span className='text-xl'>savoring culinary delights</span></p>
                                     <a href="">Comming soon...</a>
                                 </div>
                             </div>
@@ -241,9 +241,9 @@ export default function Home() {
 
                         <div className="card1 bg-sky-100">
                             <div className="box1">
-                                <div className="content1">
-                                    <h3>Hockey</h3>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores sequi, quisquam ea hic exercitationem maiores consequuntur voluptas a ei</p>
+                                <div className="content1 p-1">
+                                    <h3>Open Gym</h3>
+                                    <p><span className='text-xl'>lifting iron with purpose</span></p>
                                     <a href="">Comming soon...</a>
                                 </div>
                             </div>
@@ -255,11 +255,11 @@ export default function Home() {
             <div className="flex justify-center pt-2 pb-24 bg-blue-50" id='contactus'>
                 <div className="flex flex-col max-w-7xl justify-center items-center">
                     <div className="overflow-hidden w-3/4 bg-white m-6 p-6 shadow-lg flex flex-col md:flex-row justify-center shadow-gray-600  rounded-xl">
-                        <div className="h-26 w-52 overflow-hidden"><Image  width={'100%'} height={'100%'} src={myimg}
+                        <div className="h-26 w-52 overflow-hidden"><Image width={'100%'} height={'100%'} src={myimg}
                             alt="cricket" className="" /> </div>
                         <div className="grid p-2">
-                            <div className="font-bold text-lg text-black m-2 ">Address : Behid Shell Petrol Pump, Near D-Mart, Ahmedabad Highway, Palanpur, Gujarat </div>
-                               
+                            <div className="font-bold text-lg text-black m-2 ">Address : Behind Shell Petrol Pump, Near D-Mart, Ahmedabad Highway, Palanpur, Gujarat </div>
+
                             <div className=" m-2 text-sm"><span className='font-bold text-xl text-black'>Mobile :</span><span className=' text-orange-600 text-xl'> 6356000057 </span></div>
                         </div>
                     </div>

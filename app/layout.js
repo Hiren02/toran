@@ -7,17 +7,18 @@ import NextTopLoader from 'nextjs-toploader';
 const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'Toran Club',
-  description:"Sports booking platform, book your favourite sports"
+  description: "Sports booking platform, book your favourite sports"
 }
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className='h-full ' suppressHydrationWarning={true}>
       <body className={`${inter.className} h-full`} >
         <NextTopLoader height={5} color="#000000" showSpinner={false} />
-        <Header/>
+        <Header />
         {children}
-        <Footer/>
-        </body>
+        <Footer />
+      </body>
     </html>
   )
 }

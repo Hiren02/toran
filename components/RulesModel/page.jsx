@@ -1,15 +1,18 @@
 'use client'
 import { Fragment, useState } from 'react'
+import { sha256 } from 'crypto-hash';
 import axios from 'axios';
 import * as yup from 'yup'
 import { Dialog, Transition } from '@headlessui/react'
 import { XCloseIcn } from './Icon/page'
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
+import Script from 'next/script';
 
-const RulesModal = ({ onHideModal }) => {
+const RulesModal = ({ onHideModal, totalprice, final_slot, final_sport, final_date, }) => {
 
   const [isOpenFeedBackModal, setIsOpenFeedBackModal] = useState(true)
+
   const onClose = () => {
     setIsOpenFeedBackModal(false)
     onHideModal()
@@ -25,18 +28,57 @@ const RulesModal = ({ onHideModal }) => {
   })
 
   const onSubmit = async (data) => {
-    console.log(data);
-    const details = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}userdetails`, data)
-    if (details && details?.data && details?.data?.access_token) {
+    const merchantTransactionId = (Math.random()).toString(36).slice(2);
+    const merchantUserId = Math.random().toString(36).slice(2)
 
-      onClose()
+    let newData = data
+    newData.price = totalprice,
+      newData.slot = final_slot,
+      newData.sport = final_sport,
+      newData.date = final_date;
+    newData.merchantTransactionId = merchantTransactionId
+    newData.merchantUserId = merchantUserId
+
+    const obj = {
+      merchantId: process.env.NEXT_PUBLIC_MERCHANT_ID,
+      merchantTransactionId: merchantTransactionId,
+      merchantUserId: merchantUserId,
+      amount: totalprice * 100,
+      redirectUrl: process.env.NEXT_PUBLIC_BASE_URL,
+      redirectMode: "POST",
+      mobileNumber: data.mobile_number,
+      callbackUrl: process.env.NEXT_PUBLIC_BASE_URL,
+      paymentInstrument: {
+        type: "PAY_PAGE"
+      }
+    }
+
+    const base64 = btoa(JSON.stringify(obj))
+    let sha = await sha256(base64 + "/pg/v1/pay" + process.env.NEXT_PUBLIC_SALT_KEY)
+    sha = sha + "###1"
+    let newsha = await sha256(`/pg/v1/status/${process.env.NEXT_PUBLIC_MERCHANT_ID}/${merchantTransactionId}` + process.env.NEXT_PUBLIC_SALT_KEY) + "###1"
+    const payload = {
+      sha, base64, merchantTransactionId, newsha
+    }
+    const responce = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}pay`, payload)
+    if (responce && responce.data && responce.data.success === true) {
+      const userDetails = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}userDetails`, newData)
+      if (userDetails && userDetails.data && userDetails.data._id && userDetails.status === 200) {
+        localStorage.setItem('this', merchantTransactionId)
+        localStorage.setItem('this2', sha)
+        window.location.href = responce.data.data?.instrumentResponse?.redirectInfo?.url ? responce.data.data?.instrumentResponse?.redirectInfo?.url : ""
+      } else {
+
+      }
     } else {
-      onClose()
 
     }
+
+    onClose()
   }
   return (
     <>
+      <Script src="https://js.instamojo.com/v1/checkout.js"></Script>
       <Transition appear show={isOpenFeedBackModal} as={Fragment}>
         <Dialog as="div" className="relative z-20" onClose={() => null}>
           <Transition.Child
