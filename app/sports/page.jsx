@@ -1,8 +1,11 @@
 "use client"
 import Image from 'next/image'
 import React from 'react'
-import des from '../../public/img/des.jpg'
-import cricket from '../../public/Images/cricket.jpeg'
+import slider from '../../public/Images/slider.jpg'
+import slider1 from '../../public/Images/slider1.jpeg'
+import slider2 from '../../public/Images/slider2.jpeg'
+import slider3 from '../../public/Images/slider3.jpeg'
+import slider4 from '../../public/Images/slider4.jpeg'
 import cric from '../../public/Images/criclet.png'
 import football from '../../public/Images/fooot.png'
 import { useRouter } from 'next/navigation';
@@ -30,16 +33,19 @@ export default function Sports() {
                     <div className="relative overflow-hidden rounded-md h-44 sm:h-300 md:h-400 lg:500">
                         <Slider {...settings} className='c-slider'>
                             <div >
-                                <Image src={des} alt='image'></Image>
+                                <Image src={slider} alt='image'></Image>
                             </div>
                             <div>
-                                <Image src={des} alt='image'></Image>
+                                <Image src={slider1} alt='image'></Image>
                             </div>
                             <div>
-                                <Image src={des} alt='image'></Image>
+                                <Image src={slider2} alt='image'></Image>
                             </div>
                             <div>
-                                <Image src={des} alt='image'></Image>
+                                <Image src={slider3} alt='image'></Image>
+                            </div>
+                            <div>
+                                <Image src={slider4} alt='image'></Image>
                             </div>
                         </Slider>
                         <div className="absolute flex justify-center w-full bottom-2">
@@ -111,16 +117,19 @@ export default function Sports() {
                     <div className="relative overflow-hidden rounded-md h-44 sm:h-300 md:h-400 lg:500">
                         <Slider {...settings} className='c-slider'>
                             <div>
-                                <Image src={des} alt='image'></Image>
+                                <Image src={slider} alt='image'></Image>
                             </div>
                             <div>
-                                <Image src={des} alt='image'></Image>
+                                <Image src={slider1} alt='image'></Image>
                             </div>
                             <div>
-                                <Image src={des} alt='image'></Image>
+                                <Image src={slider2} alt='image'></Image>
                             </div>
                             <div>
-                                <Image src={des} alt='image'></Image>
+                                <Image src={slider3} alt='image'></Image>
+                            </div>
+                            <div>
+                                <Image src={slider4} alt='image'></Image>
                             </div>
                         </Slider>
                         <div className="absolute flex justify-center w-full bottom-2">
@@ -143,7 +152,7 @@ export default function Sports() {
                             </div>
                         </div>
                         <div className="flex flex-col p-4 border rounded-xl border-orange-400 "><h2 className="font-semibold text-md md:text-lg">Timing</h2>
-                            <div className="mt-2 leading-1 text-black">5:30 AM - 10:00 PM</div>
+                            <div className="mt-2 leading-1 text-black">06:00 AM (Morning) - 03:00 AM (Night)</div>
                         </div>
                         <div className="flex flex-col h-auto p-4 mt-5 border rounded-xl border-orange-400 "><div className="font-semibold text-md md:text-lg">Location</div>
                             <h2 className="my-2 text-black">Behid Shell Petrol Pump, Near D-Mart, Ahmedabad Highway, Palanpur, Gujarat</h2>

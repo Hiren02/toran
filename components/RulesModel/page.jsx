@@ -118,12 +118,31 @@ const RulesModal = ({ onHideModal, totalprice, final_slot, final_sport, final_da
                       className="text-2xl font-bold text-center text-black"
                     >
                       Rules
+                      <br />
+                      <span className='font-bold'>Violation of the below rules will result in a fine of 1000 rupees.</span>
                     </Dialog.Title>
                     <div className="mt-5">
                       <div className='py-5 sm:flex'>
                         <div className='mr-8 mb-4'>
                         </div>
                         <div className='patient-details sm:w-[calc(100%_-_104px)] text-center border-b-2 border-midextralightgray'>
+                          <div className='flex text-left w-full'>
+                            1. Payment will not be refunded after booking.
+                            <br />
+                            2. Smoking and pan masala are strictly prohibited.
+                            <br />
+                            3. No pitching or spitting anywhere in the property.
+                            <br />
+                            4. Don't tamper with the lawn, nets.
+                            <br />
+                            5. Max of 14 players allowed inside in booking.
+                            <br />
+                            6. Team should only play with lawn tennis ball.
+                            <br />
+                            7. You have to vacate the ground immediately after time ends.
+                            <br />
+                            {/* <span className='font-bold'>Violation of the above rules will result in a fine of 1000 rupees.</span> */}
+                          </div>
                           <div className='flex mb-1 mt-3 w-full'>
                             <div className='text-semilightgray pt-2 pr-3 w-1/3 text-base md:text-lg text-black'>Name</div>
                             <input {...register("name")} type='text' className='p-2 rounded-lg' ></input>
@@ -136,7 +155,7 @@ const RulesModal = ({ onHideModal, totalprice, final_slot, final_sport, final_da
                           </div>
                           {errors.email && <span className='text-red-700' >{errors.email.message}</span>}
                           <div className='flex mb-1 mt-3 w-full'>
-                            <div className='text-semilightgray pr-3 w-1/3 text-base md:text-lg text-black'>Mobile Number</div>
+                            <div className='text-semilightgray pr-3 w-1/3 text-base md:text-lg text-black'>Mob. No</div>
                             <input {...register("mobile_number")} maxLength={10} type='text' className='p-2 rounded-lg'></input>
                           </div>
                           {errors.mobile_number && <span className='text-red-700' >{errors.mobile_number.message}</span>}

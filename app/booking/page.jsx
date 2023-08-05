@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import React, { Fragment, useEffect, useState } from 'react'
 import CartImage from '../../public/Images/cart.png'
+import deleteImg from '../../public/Images/delete.png'
 import DatePicker from 'react-date-picker'
 import axios from 'axios'
 import 'react-date-picker/dist/DatePicker.css';
@@ -189,7 +190,7 @@ export default function Booking() {
             </div>
           </div>
           <div className="border lg:pt-4 w-[70%] md:w-[40%] bg-gray-100 items-center flex flex-col justify-center leading-7 space-y-8 h-full">
-            <div>
+            <div className='flex'>
               <Image src={CartImage} height={70} width={70} alt="Cart" className="rounded-full justify-center" />
               {/* <h2 className='text-orange-400 font-extrabold text-3xl pr-5'> Your cart</h2> */}
             </div>
@@ -217,6 +218,9 @@ export default function Booking() {
               </div>
               <div>
                 <button className='inline-block primary-buttons text-black bg-orange-400 font-bold text-sm bg-primary border border-primary uppercase rounded-2xl px-5 py-3 mr-4 hover:transition-all hover:border-spacing-5 hover:bg-orange-500 lg:text-base' onClick={() => proccedToPay()}>Procced to pay</button>
+              </div>
+              <div>
+                <button className='inline-block primary-buttons text-black bg-orange-400 font-bold text-sm bg-primary border border-primary uppercase rounded-2xl px-5 py-3 mr-4 hover:transition-all hover:border-spacing-5 hover:bg-orange-500 lg:text-base' onClick={()=>{window.location.reload()}}>Remove Item</button>
               </div>
             </Fragment> : <div className='text-orange-400 text-xl'> Your cart is empty! </div>}
           </div>

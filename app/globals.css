@@ -103,7 +103,7 @@ section .title::after{
 
 .home{
   display: flex;
-  background: url("../public/img/des.jpg") no-repeat center;
+  background: url("../public/Images/background.jpeg") no-repeat center;
   height: 100vh;
   color: #fff;
   min-height: 500px;

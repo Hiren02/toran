@@ -14,7 +14,7 @@ export default function Home() {
 
     useEffect(() => {
         const typed = new Typed(typedElementRef.current, {
-            strings: ["Cricket", "Swimming Pool", "Gym", "food"],
+            strings: ["Cricket", "Swimming", "Gym", "food"],
             typeSpeed: 100,
             backSpeed: 60,
             loop: true
@@ -153,7 +153,7 @@ export default function Home() {
                                     <Image src={img3} alt='icons' />
                                 </span>
                             </div>
-                            <div className="font-semibold leading-6 md:leading-8 text-sm md:text-[18px] lg:text-[20px] md:w-60 text-on_surface">Book sports venues</div>
+                            <div className="font-semibold leading-6 md:leading-8 text-sm md:text-[18px] lg:text-[20px] md:w-60 text-on_surface">Book sporting events</div>
                         </div>
                         <div className="flex flex-row items-center justify-start space-x-4">
                             <div className="relative w-16 h-16 md:w-24 md:h-24">
@@ -214,7 +214,7 @@ export default function Home() {
                             <div className="box1 bg-orange-400">
                                 <div className="content1 bg-orange-400">
                                     <h3>Cricket / FootBall</h3>
-                                    <p><span className='text-xl'>Swinging the bat with finesse</span></p>
+                                    <p><span className='text-2xl'>Swinging the bat with finesse</span></p>
                                     <a href="/sports">Book Now</a>
                                 </div>
                             </div>
@@ -224,7 +224,7 @@ export default function Home() {
                             <div className="box1">
                                 <div className="content1">
                                     <h3>Swimming Pool</h3>
-                                    <p><span className='text-xl'>diving into clear waters</span></p>
+                                    <p><span className='text-2xl'>diving into clear waters</span></p>
                                     <a href="">Comming soon...</a>
                                 </div>
                             </div>
@@ -233,7 +233,7 @@ export default function Home() {
                             <div className="box1">
                                 <div className="content1">
                                     <h3>Food</h3>
-                                    <p><span className='text-xl'>savoring culinary delights</span></p>
+                                    <p><span className='text-2xl'>savoring culinary delights</span></p>
                                     <a href="">Comming soon...</a>
                                 </div>
                             </div>
@@ -243,7 +243,7 @@ export default function Home() {
                             <div className="box1">
                                 <div className="content1 p-1">
                                     <h3>Open Gym</h3>
-                                    <p><span className='text-xl'>lifting iron with purpose</span></p>
+                                    <p><span className='text-2xl'>lifting iron with purpose</span></p>
                                     <a href="">Comming soon...</a>
                                 </div>
                             </div>
