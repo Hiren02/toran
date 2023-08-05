@@ -33,7 +33,7 @@ export default function Booking() {
     const year = selectedDate.getFullYear();
     const convertedDate = `${day}/${month}/${year}`;
 
-    const getDetails = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}getslot`, { date: convertedDate });
+    const getDetails = await axios.post(`https://toranclub.com/api/getslot`, { date: convertedDate });
     if (getDetails && getDetails.data && getDetails.data.length > 0) {
       settimeslot(getDetails.data);
     }
@@ -220,7 +220,7 @@ export default function Booking() {
                 <button className='inline-block primary-buttons text-black bg-orange-400 font-bold text-sm bg-primary border border-primary uppercase rounded-2xl px-5 py-3 mr-4 hover:transition-all hover:border-spacing-5 hover:bg-orange-500 lg:text-base' onClick={() => proccedToPay()}>Procced to pay</button>
               </div>
               <div>
-                <button className='inline-block primary-buttons text-black bg-orange-400 font-bold text-sm bg-primary border border-primary uppercase rounded-2xl px-5 py-3 mr-4 hover:transition-all hover:border-spacing-5 hover:bg-orange-500 lg:text-base' onClick={()=>{window.location.reload()}}>Remove Item</button>
+                <button className='inline-block primary-buttons text-black bg-orange-400 font-bold text-sm bg-primary border border-primary uppercase rounded-2xl px-5 py-3 mr-4 hover:transition-all hover:border-spacing-5 hover:bg-orange-500 lg:text-base' onClick={() => { window.location.reload() }}>Remove Item</button>
               </div>
             </Fragment> : <div className='text-orange-400 text-xl'> Your cart is empty! </div>}
           </div>
