@@ -7,9 +7,8 @@ import { Dialog, Transition } from '@headlessui/react'
 import { XCloseIcn } from './Icon/page'
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import Script from 'next/script';
 
-const RulesModal = ({ onHideModal, totalprice, final_slot, final_sport, final_date, }) => {
+const RulesModal = ({ onHideModal, conFees, totalprice, final_slot, final_sport, final_date, }) => {
 
   const [isOpenFeedBackModal, setIsOpenFeedBackModal] = useState(true)
 
@@ -30,9 +29,9 @@ const RulesModal = ({ onHideModal, totalprice, final_slot, final_sport, final_da
   const onSubmit = async (data) => {
     const merchantTransactionId = (Math.random()).toString(36).slice(2);
     const merchantUserId = Math.random().toString(36).slice(2)
-
+    const grantTotal = Number(totalprice.toFixed(2)) + Number(conFees)
     let newData = data
-    newData.price = totalprice,
+    newData.price = grantTotal,
       newData.slot = final_slot,
       newData.sport = final_sport,
       newData.date = final_date;
@@ -43,7 +42,7 @@ const RulesModal = ({ onHideModal, totalprice, final_slot, final_sport, final_da
       merchantId: process.env.NEXT_PUBLIC_MERCHANT_ID,
       merchantTransactionId: merchantTransactionId,
       merchantUserId: merchantUserId,
-      amount: totalprice * 100,
+      amount: grantTotal * 100,
       redirectUrl: process.env.NEXT_PUBLIC_BASE_URL,
       redirectMode: "POST",
       mobileNumber: data.mobile_number,
@@ -64,8 +63,6 @@ const RulesModal = ({ onHideModal, totalprice, final_slot, final_sport, final_da
     if (responce && responce.data && responce.data.success === true) {
       const userDetails = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}userDetails`, newData)
       if (userDetails && userDetails.data && userDetails.data._id && userDetails.status === 200) {
-        localStorage.setItem('this', merchantTransactionId)
-        localStorage.setItem('this2', sha)
         window.location.href = responce.data.data?.instrumentResponse?.redirectInfo?.url ? responce.data.data?.instrumentResponse?.redirectInfo?.url : ""
       } else {
 
@@ -78,7 +75,6 @@ const RulesModal = ({ onHideModal, totalprice, final_slot, final_sport, final_da
   }
   return (
     <>
-      <Script src="https://js.instamojo.com/v1/checkout.js"></Script>
       <Transition appear show={isOpenFeedBackModal} as={Fragment}>
         <Dialog as="div" className="relative z-20" onClose={() => null}>
           <Transition.Child
@@ -111,7 +107,7 @@ const RulesModal = ({ onHideModal, totalprice, final_slot, final_sport, final_da
                       className="absolute right-4 top-4 focus:outline-none"
                       onClick={onClose}
                     >
-                      <XCloseIcn className='w-6 h-6' />
+                      <XCloseIcn className='w-6 text-black h-6' />
                     </button>
                     <Dialog.Title
                       as="h3"
@@ -126,7 +122,7 @@ const RulesModal = ({ onHideModal, totalprice, final_slot, final_sport, final_da
                         <div className='mr-8 mb-4'>
                         </div>
                         <div className='patient-details sm:w-[calc(100%_-_104px)] text-center border-b-2 border-midextralightgray'>
-                          <div className='flex text-left w-full'>
+                          <div className='flex text-left text-black w-full'>
                             1. Payment will not be refunded after booking.
                             <br />
                             2. Smoking and pan masala are strictly prohibited.
@@ -141,21 +137,19 @@ const RulesModal = ({ onHideModal, totalprice, final_slot, final_sport, final_da
                             <br />
                             7. You have to vacate the ground immediately after time ends.
                             <br />
-                            {/* <span className='font-bold'>Violation of the above rules will result in a fine of 1000 rupees.</span> */}
                           </div>
-                          <div className='flex mb-1 mt-3 w-full'>
-                            <div className='text-semilightgray pt-2 pr-3 w-1/3 text-base md:text-lg text-black'>Name</div>
+                          <div className='flex-row sm:flex mb-1 mt-3 w-auto sm:w-full'>
+                            <div className='text-semilightgray pr-0.5 pt-2 sm:pr-3 w-1/3 text-base md:text-lg text-black'>Name</div>
                             <input {...register("name")} type='text' className='p-2 rounded-lg' ></input>
-                            {/* <div className='font-bold w-2/3 text-base md:text-lg'></div> */}
                           </div>
                           {errors.name && <span className='text-red-700 ' >{errors.name.message}</span>}
-                          <div className='flex mb-1 mt-3 w-full'>
-                            <div className='text-semilightgray pr-3 w-1/3 text-base md:text-lg text-black'>Email</div>
+                          <div className=' flex-row sm:flex mb-1 mt-3 w-full'>
+                            <div className='text-semilightgray pr-0.5 sm:pr-3 w-1/3 text-base md:text-lg text-black'>Email</div>
                             <input {...register("email")} type='text' className='p-2 rounded-lg'></input>
                           </div>
                           {errors.email && <span className='text-red-700' >{errors.email.message}</span>}
-                          <div className='flex mb-1 mt-3 w-full'>
-                            <div className='text-semilightgray pr-3 w-1/3 text-base md:text-lg text-black'>Mob. No</div>
+                          <div className='flex-row sm:flex mb-1 mt-3 w-full'>
+                            <div className='text-semilightgray pr-0.5 sm:pr-3 w-1/3 text-base md:text-lg text-black'>Mob. No</div>
                             <input {...register("mobile_number")} maxLength={10} type='text' className='p-2 rounded-lg'></input>
                           </div>
                           {errors.mobile_number && <span className='text-red-700' >{errors.mobile_number.message}</span>}

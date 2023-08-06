@@ -3,30 +3,15 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    // <div className='fixed bottom-0'>
-    <div className="bg-gray-900 w-full fixed bottom-0 bottom-footer p-3 flex flex-col text-center pt-5 space-y-8 md:flex-row md:justify-between md:space-y-0">
-      <div
-        className="flex mx-3 justify-between space-x-20 md:flex-row text-gray-200 md:space-x-28 md:ml-20 lg:ml-24 lg:space-x-[13rem] xl:space-x-72 xl:ml-24">
-        <p>@ Copyright <strong className="text-orange-400">MCBYSTAR FUN N FOOD LLP </strong>All Rights Reserved</p>
-        <p><strong className="text-orange-400">Created by </strong>Hiren - 9484462682 | Manan- 9327947244</p>
-        <p>Contact us - <span className="text-orange-400">6356000057</span></p>
+    <div className="bg-gray-900 w-full fixed bottom-0 bottom-footer p-3 flex flex-col text-center pt-6 space-y-8 md:flex-row md:justify-between md:space-y-0">
+      <div className=" sm:flex flex-row mx-3 justify-between sm:space-x-20 md:flex-row text-gray-200 md:space-x-22 md:ml-20 lg:ml-20 lg:space-x-[4rem] xl:space-x-54 xl:ml-24">
+        <p>@ Copyright <strong className="text-orange-400 p-1">MCBYSTAR FUN N FOOD LLP </strong>All Rights Reserved</p>
+        <hr />
+        <p><strong className="text-orange-400 p-1">Created by </strong>Hiren - 9484462682 | Manan- 9327947244</p>
+        <hr />
+        <p>Contact us - <span className="text-orange-400 p-1">6356000057</span></p>
       </div>
-      {/* <div
-        className="text-white pb-4 text-center text-xl space-x-2 md:w-2/4 md:pb-0 md:pl-2 md:space-x-1 lg:pl-[171px] lg:space-x-2 xl:pl-44"> */}
-      {/* <a href="#"
-          className="w-8 h-8 bg-orange-500 hover:text-orange-500 inline-block rounded-full pt-[3px] hover:bg-gray-200"><i
-            className="fa fa-twitter"></i></a> <a href="#"
-              className="w-8 h-8 bg-orange-500 hover:text-orange-500 inline-block rounded-full pt-[3px] hover:bg-gray-200"><i
-                className="fa fa-instagram"></i></a> <a href="#"
-                  className="w-8 h-8 bg-orange-500 hover:text-orange-500 inline-block rounded-full pt-[3px] hover:bg-gray-200"><i
-                    className="fa fa-facebook"></i></a> <a href="#"
-                      className="w-8 h-8 bg-orange-500 hover:text-orange-500 inline-block rounded-full pt-[3px] hover:bg-gray-200"><i
-                        className="fa fa-google"></i></a> <a href="#"
-                          className="w-8 h-8 bg-orange-500 hover:text-orange-500 inline-block rounded-full pt-[3px] hover:bg-gray-200"><i
-                            className="fa fa-linkedin"></i></a> */}
-      {/* </div> */}
     </div>
-    // </div>
   )
 }
 
