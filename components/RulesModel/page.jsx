@@ -27,7 +27,8 @@ const RulesModal = ({ onHideModal, conFees, totalprice, final_slot, final_sport,
   })
 
   const onSubmit = async (data) => {
-    const merchantTransactionId = (Math.random()).toString(36).slice(2);
+    const id1 = ((Math.random()).toString(36).slice(2)).toUpperCase()
+    const merchantTransactionId = ((Math.random()).toString(36).slice(2)).toUpperCase() + id1;
     const merchantUserId = Math.random().toString(36).slice(2)
     // Need later
     // const grantTotal = Number(totalprice.toFixed(2)) + Number(conFees)
