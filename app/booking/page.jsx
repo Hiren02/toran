@@ -74,8 +74,8 @@ export default function Booking() {
 
     }
   }
-  const fees = totalprice * 0.02
-  const conFees = (fees + fees * 0.18).toFixed(2)
+  // const fees = totalprice * 0.02
+  // const conFees = (fees + fees * 0.18).toFixed(2)
 
   const selectedSlot = (slot, price, index) => {
     const element = document.getElementsByClassName('slots')[index];
@@ -210,10 +210,10 @@ export default function Booking() {
                 <label className='font-bold pr-2 text-xl text-black'>Total Price:</label>
                 <span className='text-xl  p-1 text-black'>{"₹ " + totalprice}</span>
               </div>
-              <div className='p-2'>
+              {/* <div className='p-2'>
                 <label className='font-bold pr-2 text-xl text-black'>Convenience fees:</label>
                 <span className='text-xl  p-1 text-black'>{"₹ " + conFees}</span>
-              </div>
+              </div> */}
               <div className='p-2'>
                 <button className='inline-block primary-buttons text-black bg-orange-400 font-bold text-sm bg-primary border border-primary uppercase rounded-2xl px-5 py-3 mr-4 hover:transition-all hover:border-spacing-5 hover:bg-orange-500 lg:text-base' onClick={() => proccedToPay()}>Procced to pay</button>
               </div>
@@ -224,7 +224,7 @@ export default function Booking() {
           </div>
         </div>
       </div>
-      {show ? <RulesModal conFees={conFees} totalprice={totalprice} final_slot={final_slot} final_sport={final_sport} final_date={final_date} onHideModal={onHideModal} /> : <></>}
+      {show ? <RulesModal totalprice={totalprice} final_slot={final_slot} final_sport={final_sport} final_date={final_date} onHideModal={onHideModal} /> : <></>}
     </div>
   )
 }

@@ -19,7 +19,7 @@ const RulesModal = ({ onHideModal, conFees, totalprice, final_slot, final_sport,
   const Schema = yup.object({
     name: yup.string().required("Name is required"),
     email: yup.string().email("Please enter a valid email address").required("Email is required"),
-    mobile_number: yup.string().max(10).required("Number is required"),
+    mobile_number: yup.number().max(10).min(10).required("Number is required"),
   }).required()
 
   const { register, handleSubmit, formState: { errors }, } = useForm({
@@ -29,9 +29,11 @@ const RulesModal = ({ onHideModal, conFees, totalprice, final_slot, final_sport,
   const onSubmit = async (data) => {
     const merchantTransactionId = (Math.random()).toString(36).slice(2);
     const merchantUserId = Math.random().toString(36).slice(2)
-    const grantTotal = Number(totalprice.toFixed(2)) + Number(conFees)
+    // Need later
+    // const grantTotal = Number(totalprice.toFixed(2)) + Number(conFees)
+
     let newData = data
-    newData.price = grantTotal,
+    newData.price = totalprice,
       newData.slot = final_slot,
       newData.sport = final_sport,
       newData.date = final_date;
@@ -42,7 +44,7 @@ const RulesModal = ({ onHideModal, conFees, totalprice, final_slot, final_sport,
       merchantId: process.env.NEXT_PUBLIC_MERCHANT_ID,
       merchantTransactionId: merchantTransactionId,
       merchantUserId: merchantUserId,
-      amount: grantTotal * 100,
+      amount: totalprice,
       redirectUrl: process.env.NEXT_PUBLIC_BASE_URL,
       redirectMode: "POST",
       mobileNumber: data.mobile_number,
@@ -72,6 +74,12 @@ const RulesModal = ({ onHideModal, conFees, totalprice, final_slot, final_sport,
     }
 
     onClose()
+  }
+  const hadleKey = (key) => {
+    const keyPressed = key.key;
+    if (!/^[0-9]$/.test(keyPressed)) {
+      key.preventDefault();
+    }
   }
   return (
     <>
@@ -150,7 +158,7 @@ const RulesModal = ({ onHideModal, conFees, totalprice, final_slot, final_sport,
                           {errors.email && <span className='text-red-700' >{errors.email.message}</span>}
                           <div className='flex-row sm:flex mb-1 mt-3 w-full'>
                             <div className='text-semilightgray pr-0.5 sm:pr-3 w-1/3 text-base md:text-lg text-black'>Mob. No</div>
-                            <input {...register("mobile_number")} maxLength={10} type='text' className='p-2 rounded-lg'></input>
+                            <input {...register("mobile_number")} onKeyPress={(e) => { hadleKey(e) }} minLength={10} maxLength={10} type='text' className='p-2 rounded-lg'></input>
                           </div>
                           {errors.mobile_number && <span className='text-red-700' >{errors.mobile_number.message}</span>}
                         </div>
