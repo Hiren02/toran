@@ -19,7 +19,7 @@ const RulesModal = ({ onHideModal, conFees, totalprice, final_slot, final_sport,
   const Schema = yup.object({
     name: yup.string().required("Name is required"),
     email: yup.string().email("Please enter a valid email address").required("Email is required"),
-    mobile_number: yup.number().max(10).min(10).required("Number is required"),
+    mobile_number: yup.number().max(10).required("Number is required"),
   }).required()
 
   const { register, handleSubmit, formState: { errors }, } = useForm({
