@@ -149,17 +149,17 @@ const RulesModal = ({ onHideModal, conFees, totalprice, final_slot, final_sport,
                           </div>
                           <div className='flex-row sm:flex mb-1 mt-3 w-auto sm:w-full'>
                             <div className='text-semilightgray pr-0.5 pt-2 sm:pr-3 w-1/3 text-base md:text-lg text-black'>Name</div>
-                            <input {...register("name")} type='text' className='p-2 rounded-lg text-black font-bold' ></input>
+                            <input {...register("name")} type='text' className='p-2 rounded-lg text-black' ></input>
                           </div>
                           {errors.name && <span className='text-red-700 ' >{errors.name.message}</span>}
                           <div className=' flex-row sm:flex mb-1 mt-3 w-full'>
                             <div className='text-semilightgray pr-0.5 sm:pr-3 w-1/3 text-base md:text-lg text-black'>Email</div>
-                            <input {...register("email")} type='text' className='p-2 rounded-lg text-black font-bold'></input>
+                            <input {...register("email")} type='text' className='p-2 rounded-lg text-black'></input>
                           </div>
                           {errors.email && <span className='text-red-700' >{errors.email.message}</span>}
                           <div className='flex-row sm:flex mb-1 mt-3 w-full'>
                             <div className='text-semilightgray pr-0.5 sm:pr-3 w-1/3 text-base md:text-lg text-black'>Mob. No</div>
-                            <input {...register("mobile_number")} onKeyPress={(e) => { hadleKey(e) }} minLength={10} maxLength={10} type='text' className='p-2 rounded-lg text-black font-bold'></input>
+                            <input {...register("mobile_number")} onKeyPress={(e) => { hadleKey(e) }} minLength={10} maxLength={10} type='text' className='p-2 rounded-lg text-black'></input>
                           </div>
                           {errors.mobile_number && <span className='text-red-700' >{errors.mobile_number.message}</span>}
                         </div>
