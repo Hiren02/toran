@@ -181,32 +181,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="relative top-0 w-full mx-10 md:w-auto md:mx-0">
-                    <div className="w-full md:py-4 my-4 bg-white border rounded-md md:my-0">
-                        <div className="grid w-full grid-cols-1 row-gap-8 px-2 divide-y md:divide-x md:divide-y-0 md:grid-cols-4">
-                            <div className="flex flex-col items-center justify-start px-4 py-6 text-center md:text-center md:py-0">
-                                <h6 className="md:mb-4 text-2xl font-bold md:text-3xl text-black">
-                                    2M+</h6>
-                                <p className="md:text-[16px] lg:text-[20px] text-gray-800 ">Users</p>
-                            </div>
-                            <div className="flex flex-col items-center justify-start px-4 py-6  text-center md:text-center md:py-0">
-                                <h6 className="md:mb-4 text-2xl font-bold md:text-3xl text-black">50+
-                                </h6>
-                                <p className="md:text-[16px] lg:text-[20px] text-gray-800 ">Sports</p>
-                            </div>
-                            <div className="flex flex-col items-center justify-start px-4 py-6 md:py-0 text-center md:text-center ">
-                                <h6 className="md:mb-4 text-2xl font-bold md:text-3xl text-black">6M+</h6>
-                                <p className="md:text-[16px] lg:text-[20px] text-gray-800 ">Sports Activities Enabled</p>
-                            </div>
-                            <div className="flex flex-col items-center justify-start px-4 py-6  text-center md:text-center md:py-0">
-                                <h6 className="md:mb-4 text-2xl font-bold md:text-3xl text-black">4M+</h6>
-                                <p className="md:text-[16px] lg:text-[20px] text-gray-800 ">Player Connections Enabled</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </section>
-
             <div className="project pb-6 bg-white">
                 <div className="flex justify-center bg-white z-auto pt-20 mb-14" id="projectcard">
                     <div className="container1  bg-gray-200 flex flex-wrap justify-center pt-10 w-auto rounded-2xl">
