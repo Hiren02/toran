@@ -46,10 +46,10 @@ const RulesModal = ({ onHideModal, conFees, totalprice, final_slot, final_sport,
       merchantTransactionId: merchantTransactionId,
       merchantUserId: merchantUserId,
       amount: totalprice,
-      redirectUrl: process.env.NEXT_PUBLIC_BASE_URL,
+      redirectUrl: "https://toranclub.com/",
       redirectMode: "POST",
       mobileNumber: data.mobile_number,
-      callbackUrl: process.env.NEXT_PUBLIC_BASE_URL,
+      callbackUrl: "https://toranclub.com/",
       paymentInstrument: {
         type: "PAY_PAGE"
       }
